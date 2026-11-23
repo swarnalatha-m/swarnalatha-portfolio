@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swarnalatha | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+/* NAVBAR */
+header {
+    background: #172554;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #93C5FD;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #93C5FD;
+}
+
+/* HOME */
+.home {
+    min-height: 90vh;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    background: linear-gradient(120deg, #172554, #1E40AF);
+    color: white;
+}
+
+.home-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.home h4 {
+    color: #BFDBFE;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.home h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.home h1 span {
+    color: #93C5FD;
+}
+
+.home h2 {
+    color: #DBEAFE;
+    margin-bottom: 20px;
+}
+
+.home p {
+    color: #E2E8F0;
+    line-height: 1.8;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563EB;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #1D4ED8;
+}
+
+.profile {
+    width: 280px;
+    height: 280px;
+    flex: 0 0 280px;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 10%;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+/* COMMON SECTIONS */
+section {
+    padding: 20px 6%;
+    scroll-margin-top: 90px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #1E3A8A;
+}
+
+.section-title span {
+    color: #2563EB;
+}
+
+.about {
+    text-align: center;
+    line-height: 1.9;
+    max-width: 850px;
+    margin: auto;
+    color: #0c0d0e;
+}
+
+/* SKILLS */
+.skills {
+    background: white;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 28px 15px;
+    text-align: center;
+    border-radius: 15px;
+    background:  #1E3A8A;
+    color: #fff !important;
+   
+   
+    transition: .3s;
+}
+.skill-card:hover{
+    background-color: #1D4ED8;
+    
+}
+
+
+/* PROJECTS */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #30264D12;
+    border-left: 5px solid #3B82F6;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-card h3 {
+    margin: 15px 0;
+    color: #1E3A8A;
+}
+
+.project-card p {
+    color: #64748B;
+    line-height: 1.7;
+}
+
+.tech {
+    color: #2563EB !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* EDUCATION */
+.education {
+    background: white;
+}
+
+
+
+/* CERTIFICATIONS */
+.certifications {
+    margin-top: 10px;
+}
+
+.certifications li {
+    margin: 12px 0;
+    color: #0c0d0e;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    background: linear-gradient(120deg, #172554, #1E40AF);
+    color: white;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact p {
+    color: #E2E8F0;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    display: inline-block;
+    color: #BFDBFE;
+    margin: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: #111827;
+    color: #D1D5DB;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .profile {
+        width: 220px;
+        height: 220px;
+        flex: 0 0 220px;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .skill-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="logo">Swarnalatha<span>.</span></div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+</header>
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h4>HELLO, I'M</h4>
+        <h1>Mudila <span>Swarnalatha</span></h1>
+        <h2>Aspiring Software Engineer</h2>
+        <p>
+            Computer Science Engineering graduate with a strong
+            foundation in Java, Python and Web Development.
+            Passionate about problem-solving and building
+            responsive applications.
+        </p>
+        <div class="buttons">
+            <a href="#projects" class="btn">My Projects</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </div>
+
+    <div class="profile">
+        <img src="images/4273.jpg" alt="My Profile">
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <p class="about">
+        I am an aspiring Software Engineer interested in
+        software development and web technologies. I have
+        worked on academic projects using Python, Java,
+        MySQL, HTML and CSS. I am eager to apply my skills,
+        learn new technologies and grow professionally.
+    </p>
+</section>
+
+<section class="skills" id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skill-container">
+        <div class="skill-card"><h3>Java</h3></div>
+        <div class="skill-card"><h3>Python</h3></div>
+        <div class="skill-card"><h3>HTML & CSS</h3></div>
+        <div class="skill-card"><h3>SQL & MySQL</h3></div>
+        <div class="skill-card"><h3>C</h3></div>
+        <div class="skill-card"><h3>JavaScript Basics</h3></div>
+        <div class="skill-card"><h3>VS Code</h3></div>
+        <div class="skill-card"><h3>Google Colab</h3></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>Intelligent Traffic Signal Control System</h3>
+            <p class="tech">Python | YOLOv8 | OpenCV</p>
+            <p>
+                Developed a real-time vehicle detection system
+                using computer vision and adaptive signal
+                timing based on traffic density.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Student Management System</h3>
+            <p class="tech">Java | MySQL | JDBC</p>
+            <p>
+                Created a console-based application to manage
+                student records with CRUD operations and
+                object-oriented programming concepts.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Online Shopping Website</h3>
+            <p class="tech">HTML | CSS</p>
+            <p>
+                Designed a responsive shopping website with
+                Home, About and Product sections, focusing
+                on clean design and smooth navigation.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="education" id="certifications">
+  
+
+    <div class="certifications">
+        <h2 class="section-title">My <span>Certifications</span></h2>
+        <ul>
+            <li>NPTEL - Programming in Java</li>
+            <li>NPTEL - Joy of Computing using Python</li>
+            <li>edX - Python Basics for Data Science</li>
+            <li>NXTWAVE - SQL Basics</li>
+            <li>NXTWAVE - Basic Responsive Web Designing</li>
+            <li>AICTE - AI-ML Virtual Internship</li>
+        </ul>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <p>Let's connect and explore opportunities together!</p>
+
+    <a href="mailto:swarnalathamudila@gmail.com">Email Me</a>
+    <a href="https://www.linkedin.com/in/swarna-latha-mudilab80b30319" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/917386616264" target="_blank" >Whats'app</a>
+</section>
+
+<footer>
+    <p>© 2026 Mudila Swarnalatha | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
